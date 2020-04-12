@@ -45,3 +45,15 @@ export const Email = styled.h2`
 export const Phone = styled(Name)`
   margin-top: 20px;
 `;
+
+export const SocialMediaIcons = styled.div`
+  margin-top: 20px;
+`;
+
+export const Icon = styled.img`
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+`;
+
+export const IconLink = styled.a``;

@@ -31,7 +31,9 @@ export default function Header() {
       </SetMode>
       <LinksBox>
         {lang.static.menu.map((i) => (
-          <ButtonLink key={i.id}>{i.title}</ButtonLink>
+          <ButtonLink key={i.id} onClick={() => {}}>
+            {i.title}
+          </ButtonLink>
         ))}
       </LinksBox>
     </Container>
