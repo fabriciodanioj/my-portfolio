@@ -25,7 +25,7 @@ export const Card = styled.div`
   flex: 1;
   width: 380px;
   height: 280px;
-  background: ${(props) => props.theme.colors.cards};
+  background-color: ${(props) => props.theme.colors.cards};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
 `;

@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import Switch from "react-switch";
 
 import { ThemeContext } from "../../utils/ThemeContext";
+import { LanguageContext } from "../../utils/LanguageContext";
 
 import {
   Container,
@@ -14,7 +15,9 @@ import {
 
 export default function Header() {
   const { toogleTheme, theme } = useContext(ThemeContext);
+  const { toogleLang, lang } = useContext(LanguageContext);
 
+  console.log(lang);
   return (
     <Container>
       <SetMode>
@@ -24,13 +27,12 @@ export default function Header() {
           offColor="#A8F9FF"
           onColor="#272932"
         />
-        <SetModeText>Modo Noturno</SetModeText>
+        <SetModeText>{lang.static.colormode}</SetModeText>
       </SetMode>
       <LinksBox>
-        <ButtonLink>Sobre Mim</ButtonLink>
-        <ButtonLink>Habilidades</ButtonLink>
-        <ButtonLink>Projetos</ButtonLink>
-        <ButtonLink>Contato</ButtonLink>
+        {lang.static.menu.map((i) => (
+          <ButtonLink key={i.id}>{i.title}</ButtonLink>
+        ))}
       </LinksBox>
     </Container>
   );
